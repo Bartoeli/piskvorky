@@ -62,13 +62,13 @@ a {
   background-color: #0197f6;
 }
 
-.pravidla a:hover,
-.pravidla a:focus {
+.pravidla:hover,
+.pravidla:focus {
   background-color: #1cbb96;
 }
 
-.zacit a:hover,
-.zacit a:focus {
+.zacit:hover:hover,
+.zacit:focus {
   background-color: #0090e9;
 }
 
