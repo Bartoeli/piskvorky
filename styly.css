@@ -44,18 +44,29 @@ p {
 }
 
 .tlacitka {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
 }
 
-a {
-  padding: 20px;
-  text-decoration: none;
+li {
+  width: 100%;
 }
+
+a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
 
 .pravidla {
   background-color: #1fcca4;
   margin-bottom: 2px;
+  width: 100%;
 }
 
 .zacit {
@@ -67,7 +78,7 @@ a {
   background-color: #1cbb96;
 }
 
-.zacit:hover:hover,
+.zacit:hover,
 .zacit:focus {
   background-color: #0090e9;
 }
