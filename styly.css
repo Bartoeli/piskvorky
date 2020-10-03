@@ -1,5 +1,5 @@
 html {
-  height: 100%;
+  min-height: 100vh;
 }
 
 
@@ -12,12 +12,13 @@ body {
   align-items: center;
   background-size: 100% 100%;
   justify-content: center;
+  margin: 0px;
 }
 
 .uvod {
   width: 400px;
   background-color: #283e50;
-  margin: 100px;
+  margin: 20px;
   border-top-right-radius: 5%;
   border-top-left-radius: 5%;
   
@@ -28,22 +29,22 @@ body {
   border-top-left-radius: 5%;
 }
 
-h1, p, a {
+.nazev, .texty, a {
   color: #ffffff;
   text-align: center;
 }
 
-p, a {
+.texty, a {
   font-family: 'Raleway', sans-serif;
 }
 
-h1 {
+.nazev {
   font-family: 'Lobster', cursive; 
   font-size: 60px;
   margin: 10px;
 }
 
-p {
+.texty {
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -86,3 +87,29 @@ a {
   background-color: #0090e9;
 }
 
+.seznam {
+  text-align: left;
+  padding-left: 40px;
+}
+
+.odrazka {
+  margin-bottom: 15px;
+}
+
+.kolecko, .krizek {
+  filter: invert(100%);
+  width: 1em;
+  height: 1em
+}
+
+.ukazka {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.popis {
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 10px;
+}
