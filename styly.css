@@ -16,9 +16,9 @@ body {
 }
 
 .uvod {
-  width: 400px;
+  width: 90%;
   background-color: #283e50;
-  margin: 20px;
+  margin-top: 20px;
   border-top-right-radius: 5%;
   border-top-left-radius: 5%;
   
@@ -27,26 +27,29 @@ body {
 .obrazek {
   border-top-right-radius: 5%;
   border-top-left-radius: 5%;
+  width: 100%;
 }
 
-.nazev, .texty, a {
-  color: #ffffff;
-  text-align: center;
-}
-
-.texty, a {
-  font-family: 'Raleway', sans-serif;
+.text {
+  border-top-right-radius: 5%;
+  border-top-left-radius: 5%;
 }
 
 .nazev {
   font-family: 'Lobster', cursive; 
-  font-size: 60px;
-  margin: 10px;
+  font-size: 50px;
+  margin: 20px 5px;
+  color: #ffffff;
+  text-align: center;
+  
 }
 
 .texty {
   padding-left: 20px;
   padding-right: 20px;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 
 .tlacitka {
@@ -64,10 +67,19 @@ a {
   text-decoration: none;
   padding: 10px;
   display: block;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 
 
 .pravidla {
+  background-color: #1fcca4;
+  margin-bottom: 2px;
+  width: 100%;
+}
+
+.uvodni {
   background-color: #1fcca4;
   margin-bottom: 2px;
   width: 100%;
@@ -82,6 +94,11 @@ a {
   background-color: #1cbb96;
 }
 
+.uvodni:hover,
+.uvodni:focus {
+  background-color: #1cbb96;
+}
+
 .zacit:hover,
 .zacit:focus {
   background-color: #0090e9;
@@ -89,7 +106,9 @@ a {
 
 .seznam {
   text-align: left;
-  padding-left: 40px;
+  width: 80%;
+  margin: 0px auto;
+  padding: 0px;
 }
 
 .odrazka {
@@ -112,4 +131,10 @@ a {
   color: #ffffff;
   text-align: center;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 950px) {
+  .uvod {
+    width: 80%;
+  }
 }
