@@ -72,6 +72,7 @@ body {
 figure {
   margin: 40px auto;
   width: 85%;
+  font-style: italic;
 }
 
 .ukazka {
@@ -144,6 +145,7 @@ a {
 @media screen and (min-width: 1000px) {
   .uvod {
     width: 80%;
+    max-width: 750px;
   }
 
   .obrukazky {
@@ -159,13 +161,5 @@ a {
 
   a {
     padding: 20px;
-  }
-}
-
-/* velmi široká obrazovka */
-
-@media screen and (min-width: 2800px) {
-  .uvod {
-    width: 25%;
   }
 }
