@@ -222,7 +222,8 @@ text-align: left;
   border: 1px solid black;
 }
 
-.policko:hover {
+.policko:hover,
+.policko:focus {
   opacity: 0.7;
 }
 
