@@ -253,14 +253,14 @@ a {
 
 .board__field--circle {
   background-image: url('images/circle.svg');
-  background-size: cover;
+  background-size: 70%;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .board__field--cross {
   background-image: url('images/cross.svg');
-  background-size: cover;
+  background-size: 70%;
   background-position: center center;
   background-repeat: no-repeat;
 }
