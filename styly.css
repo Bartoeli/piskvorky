@@ -150,15 +150,16 @@ a {
 .navigace {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .hraje {
-text-transform: uppercase;
-font-weight: bold;
-margin: 0px;
-padding: 0px;
-font-size: 20px;
-text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+  text-align: left;
 }
 
 .circle {
@@ -169,7 +170,7 @@ text-align: left;
   display: inline-block;
   margin-left: 3px;
   position: relative;
-    top: 3px;
+  top: 3px;
 }
 
 .buttony {
@@ -227,6 +228,17 @@ text-align: left;
   opacity: 0.7;
 }
 
+.board__field--circle {
+  background-image: url('images/circle.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.board__field--cross {
+  background-image: url('images/cross.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
 /* široká obrazovka */
 
