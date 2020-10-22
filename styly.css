@@ -162,7 +162,19 @@ a {
   text-align: left;
 }
 
-.circle {
+.hrac {
+  display: flex;
+  align-items: center;
+}
+
+.znak {
+  filter: invert(100%);
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+/* .circle {
   border: 2px solid white;
   border-radius: 50%;
   width: 1em;
@@ -171,9 +183,9 @@ a {
   margin-left: 3px;
   position: relative;
   top: 3px;
-}
+} */
 
-.cross {
+/* .cross {
   width: 50px;
   height: 50px;
   position: relative;
@@ -194,7 +206,7 @@ a {
 
 .cross::after {
   transform: rotate(-45deg);
-}
+} */
 
 .buttony {
   display: flex;
