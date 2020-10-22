@@ -10,13 +10,13 @@ const hracElm = document.querySelector('#player');
 poleElm.addEventListener('click', (event) => {
   if (player === 'circle') {
     event.target.classList.add('board__field--circle');
-    hracElm.className = 'cross';
+    event.target.disabled = true;
     player = 'cross';
-    event.target.setAttribute('disabled', true);
+    hracElm.toggleClass('cross');
   } else if (player === 'cross') {
     event.target.classList.add('board__field--cross');
     hracElm.className = 'circle';
     player = 'circle';
-    event.target.setAttribute('disabled', true);
+    event.target.disabled = true;
   }
 });
