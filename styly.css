@@ -174,39 +174,6 @@ a {
   margin-left: 5px;
 }
 
-/* .circle {
-  border: 2px solid white;
-  border-radius: 50%;
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  margin-left: 3px;
-  position: relative;
-  top: 3px;
-} */
-
-/* .cross {
-  width: 50px;
-  height: 50px;
-  position: relative;
-}
-
-.cross::before,
-.cross::after {
-  content: '';
-  display: block;
-  height: 4px;
-  background-color: white;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  transform: rotate(45deg);
-}
-
-.cross::after {
-  transform: rotate(-45deg);
-} */
 
 .buttony {
   display: flex;
@@ -225,8 +192,6 @@ a {
 .domu {
   display: flex;
   justify-content: center;
-  width: 45px;
-  height: 45px;
   margin: 0px 3px;
   border-radius: 5px;
 }

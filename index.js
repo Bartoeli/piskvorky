@@ -6,6 +6,37 @@ let player = 'circle';
 
 const poleElm = document.querySelector('.pole');
 const hracElm = document.querySelector('.znak');
+const polickoElm = document.querySelector('.policko');
+
+const poleSize = 10;
+
+const getPosition = (polickoElm) => {
+  let poleIndex = 0;
+  while (polickoElm.Index < polickoElm.length) {
+    if (poleIndex === polickoElm[poleIndex]) {
+      break;
+    }
+    poleIndex++;
+  }
+  return {
+    row: Math.floor(poleIndex / poleSize),
+    column: poleIndex % poleSize,
+  };
+};
+
+const getField = (row, column) => {
+  return poleElm[row * poleSize + column];
+};
+
+const getSymbol = (polickoElm) => {
+  if (polickoElm.classList.contains('board__field--cross')) {
+    return 'cross';
+  } else if (polickoElm.classList.contains('board__field--cross')) {
+    return 'circle';
+  } else {
+    return undefined;
+  }
+};
 
 poleElm.addEventListener('click', (event) => {
   if (player === 'circle') {
