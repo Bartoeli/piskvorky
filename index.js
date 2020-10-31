@@ -94,12 +94,7 @@ const isWinningMove = (field) => {
   // koukni doleva nahoru
   i = origin.column;
   j = origin.row;
-  while (
-    i > 0 &&
-    j > 0 &&
-    symbol === getSymbol(getField(origin.row, i - 1)) &&
-    symbol === getSymbol(getField(j - 1, origin.column))
-  ) {
+  while (i > 0 && j > 0 && symbol === getSymbol(getField(j - 1, i - 1))) {
     diaLeftRight++;
     i--;
     j--;
@@ -111,8 +106,7 @@ const isWinningMove = (field) => {
   while (
     i < poleSize - 1 &&
     j < poleSize - 1 &&
-    symbol === getSymbol(getField(origin.row, i + 1)) &&
-    symbol === getSymbol(getField(j + 1, origin.column))
+    symbol === getSymbol(getField(j + 1, i + 1))
   ) {
     diaLeftRight++;
     i++;
@@ -130,8 +124,7 @@ const isWinningMove = (field) => {
   while (
     i < poleSize - 1 &&
     j > 0 &&
-    symbol === getSymbol(getField(origin.row, i + 1)) &&
-    symbol === getSymbol(getField(j - 1, origin.column))
+    symbol === getSymbol(getField(j - 1, i + 1))
   ) {
     diaRightLeft++;
     i++;
@@ -144,8 +137,7 @@ const isWinningMove = (field) => {
   while (
     i > 0 &&
     j < poleSize - 1 &&
-    symbol === getSymbol(getField(origin.row, i - 1)) &&
-    symbol === getSymbol(getField(j + 1, origin.column))
+    symbol === getSymbol(getField(j + 1, i - 1))
   ) {
     diaRightLeft++;
     i--;
