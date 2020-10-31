@@ -44,6 +44,7 @@ const isWinningMove = (field) => {
   const symbol = getSymbol(field);
 
   let i;
+  let j;
 
   let inRow = 1; // Jednička pro právě vybrané políčko
   // Koukni doleva
@@ -89,6 +90,72 @@ const isWinningMove = (field) => {
     return true;
   }
 
+  let diaLeftRight = 1;
+  // koukni doleva nahoru
+  i = origin.column;
+  j = origin.row;
+  while (
+    i > 0 &&
+    j > 0 &&
+    symbol === getSymbol(getField(origin.row, i - 1)) &&
+    symbol === getSymbol(getField(j - 1, origin.column))
+  ) {
+    diaLeftRight++;
+    i--;
+    j--;
+  }
+
+  // koukni doprava dolů
+  i = origin.column;
+  j = origin.row;
+  while (
+    i < poleSize - 1 &&
+    j < poleSize - 1 &&
+    symbol === getSymbol(getField(origin.row, i + 1)) &&
+    symbol === getSymbol(getField(j + 1, origin.column))
+  ) {
+    diaLeftRight++;
+    i++;
+    j++;
+  }
+
+  if (diaLeftRight >= symbolsToWin) {
+    return true;
+  }
+
+  let diaRightLeft = 1;
+  // koukni doprava nahoru
+  i = origin.column;
+  j = origin.row;
+  while (
+    i < poleSize - 1 &&
+    j > 0 &&
+    symbol === getSymbol(getField(origin.row, i + 1)) &&
+    symbol === getSymbol(getField(j - 1, origin.column))
+  ) {
+    diaRightLeft++;
+    i++;
+    j--;
+  }
+
+  // koukni doleva dolů
+  i = origin.column;
+  j = origin.row;
+  while (
+    i > 0 &&
+    j < poleSize - 1 &&
+    symbol === getSymbol(getField(origin.row, i - 1)) &&
+    symbol === getSymbol(getField(j + 1, origin.column))
+  ) {
+    diaRightLeft++;
+    i--;
+    j++;
+  }
+
+  if (diaRightLeft >= symbolsToWin) {
+    return true;
+  }
+
   return false;
 };
 
@@ -101,7 +168,7 @@ poleElm.addEventListener('click', (event) => {
     player = 'cross';
     isWinningMove(event.target);
     if (isWinningMove(event.target) === true) {
-      alert(`Vyhrálo kolečko.`);
+      setTimeout(() => alert(`Vyhrálo kolečko.`), 10);
     }
     console.log(getPosition(event.target));
     console.log(isWinningMove(event.target));
@@ -113,7 +180,7 @@ poleElm.addEventListener('click', (event) => {
     player = 'circle';
     isWinningMove(event.target);
     if (isWinningMove(event.target) === true) {
-      alert(`Vyhrál křížek.`);
+      setTimeout(() => alert(`Vyhrál křížek.`), 10);
     }
     console.log(getPosition(event.target));
     console.log(isWinningMove(event.target));
