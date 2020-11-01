@@ -160,7 +160,8 @@ poleElm.addEventListener('click', (event) => {
     player = 'cross';
     isWinningMove(event.target);
     if (isWinningMove(event.target) === true) {
-      setTimeout(() => alert(`Vyhrálo kolečko.`), 10);
+      setTimeout(() => confirm(`Vyhrálo kolečko.`), 10);
+      location.reload();
     }
     console.log(getPosition(event.target));
     console.log(isWinningMove(event.target));
@@ -172,9 +173,10 @@ poleElm.addEventListener('click', (event) => {
     player = 'circle';
     isWinningMove(event.target);
     if (isWinningMove(event.target) === true) {
-      setTimeout(() => alert(`Vyhrál křížek.`), 10);
+      setTimeout(() => confirm(`Vyhrál křížek.`), 10);
+      location.reload();
     }
-    console.log(getPosition(event.target));
-    console.log(isWinningMove(event.target));
   }
+  console.log(getPosition(event.target));
+  console.log(isWinningMove(event.target));
 });
